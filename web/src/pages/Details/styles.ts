@@ -25,6 +25,7 @@ export const ClinicHeader = styled.div`
   flex-direction: row;
 
   img {
+    display:flex;
     width: 256px;
     height: 256px;
     border-radius: 50%;
