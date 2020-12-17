@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 5px 18px;
 `;
@@ -20,8 +21,8 @@ export const ClinicContainer = styled.div`
 
 export const ClinicHeader = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-between;
 
   img {
     width: 256px;
@@ -43,8 +44,10 @@ export const ClinicHeader = styled.div`
 `;
 export const ClinicInfo = styled.div`
   display: flex;
+  width: 100%;
   padding-top: 10px;
-  text-align: justify;
+  flex-direction: column;
+
   h2 {
     color: #000;
     font-size: 20px;
