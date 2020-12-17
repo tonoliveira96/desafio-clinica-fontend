@@ -32,6 +32,7 @@ export const ClinicHeader = styled.div`
   }
 
   div {
+    margin-left: 18px;
     strong {
       color: #000;
       font-size: 24px;

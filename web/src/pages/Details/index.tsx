@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
+import TagService from '../../components/TagService';
 
 import { Container, ClinicContainer, ClinicHeader, ClinicInfo } from './styles';
 
 const Details: React.FC = () => {
+
+  useEffect(()=>{
+
+  },[])
+
   return (
     <>
       <Header title="Clínica tal" hiddeButtonBack={false} showButton={false} />
@@ -18,6 +24,11 @@ const Details: React.FC = () => {
               <strong>Clínica Tal</strong>
               <p>E-mail: email@email.com</p>
               <p>Telefone: (11) 3333-3333</p>
+              <br/>
+              <TagService content="teste" /><TagService content="teste" />
+              <TagService content="teste" />
+              <TagService content="teste" />
+
             </div>
           </ClinicHeader>
           <ClinicInfo>
