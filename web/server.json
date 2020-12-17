@@ -1,0 +1,14 @@
+{
+  "clinics":[
+    {
+      "id":1,
+      "name":"",
+      "email": "",
+      "cep":"",
+      "adress":"",
+      "services":[
+
+      ]
+    }
+  ]
+}
