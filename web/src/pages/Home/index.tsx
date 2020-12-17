@@ -8,7 +8,7 @@ import { Container, Clinics } from './styles';
 const Home: React.FC = () => {
   return (
     <>
-      <Header title="Clínicas" />
+      <Header title="Clínicas" hiddeButtonBack showButton/>
       <Container>
         <Clinics>
           <Link to="/details">

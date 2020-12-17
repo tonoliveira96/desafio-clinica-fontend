@@ -6,7 +6,7 @@ import { Container, ClinicContainer, ClinicHeader, ClinicInfo } from './styles';
 const Details: React.FC = () => {
   return (
     <>
-      <Header title="Clínica tal" />
+      <Header title="Clínica tal" hiddeButtonBack={false} showButton={false} />
       <Container>
         <ClinicContainer>
           <ClinicHeader>
@@ -16,10 +16,11 @@ const Details: React.FC = () => {
             />
             <div>
               <strong>Clínica Tal</strong>
+              <p>E-mail: email@email.com</p>
+              <p>Telefone: (11) 3333-3333</p>
             </div>
-            <p>email@email.com</p>
-            <p>Telefone: (11) 3333-3333</p>
           </ClinicHeader>
+
           <ClinicInfo>
             <h2>Sobre</h2>
             <p>É um fato estabelecido há muito t</p>

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 5px 18px;
 `;
 
@@ -22,7 +21,6 @@ export const ClinicContainer = styled.div`
 export const ClinicHeader = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 
   img {
@@ -36,11 +34,17 @@ export const ClinicHeader = styled.div`
       color: #000;
       font-size: 24px;
     }
+
+    p{
+      font-size:18px;
+      color:#3d3d4d;
+    }
   }
 `;
 export const ClinicInfo = styled.div`
   display: flex;
   padding-top: 10px;
+  text-align: justify;
   h2 {
     color: #000;
     font-size: 20px;

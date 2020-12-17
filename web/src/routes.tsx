@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Create from "./pages/Create";
 import Details from "./pages/Details";
 import Home from "./pages/Home";
 
@@ -8,7 +9,8 @@ function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/details" exact component={Details} />
+        <Route path="/details" component={Details} />
+        <Route path="/create" component={Create} />
 
       </Switch>
     </BrowserRouter>

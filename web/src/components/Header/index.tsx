@@ -1,24 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
+import { Link, useHistory } from 'react-router-dom';
 
-import { Container, ContainerRoute } from './styles';
+import { Container, ContainerTitle, ContainerRoute } from './styles';
 
 interface IHeaderProps {
-  title: string
+  title: string;
+  hiddeButtonBack: boolean;
+  showButton: boolean;
 }
 
-const Header: React.FC<IHeaderProps> = ({title}) => {
+const Header: React.FC<IHeaderProps> = ({
+  title,
+  hiddeButtonBack,
+  showButton,
+}) => {
+  const { goBack } = useHistory();
   return (
     <Container>
-      <h1>{title}</h1>
+      <ContainerTitle hiddeButtonBack={hiddeButtonBack}>
+        <FiArrowLeft
+          onClick={() => {
+            goBack();
+          }}
+          size={42}
+        />
+        <h1>{title}</h1>
+      </ContainerTitle>
 
-      <ContainerRoute>
-      <Link to="/create">Cadastrar</Link>
-
+      <ContainerRoute showButton={showButton}>
+        <Link to="/create">Cadastrar</Link>
       </ContainerRoute>
-
     </Container>
   );
-}
+};
 
 export default Header;
