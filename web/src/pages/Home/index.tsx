@@ -2,6 +2,7 @@ import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
+import TagService from '../../components/TagService';
 
 import { Container, Clinics } from './styles';
 
@@ -19,9 +20,9 @@ const Home: React.FC = () => {
             <div>
               <strong>Clínica tal</strong>
               <br/>
-              <label>irri pororo</label>
-              <label>irri pororo</label>
-              <label>irri pororo</label>
+              <TagService content="Piriri pororo" />
+              <TagService content="Piriri pororo" />
+              <TagService content="Piriri pororo" />
             </div>
             <FiArrowRight size={20} color="#000" />
           </Link>
