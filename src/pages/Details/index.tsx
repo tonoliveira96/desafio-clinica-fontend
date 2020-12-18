@@ -32,16 +32,16 @@ const Details: React.FC = () => {
     api.get(`clinic/${params.id}`).then((response) => {
       setClinic(response.data);
       console.log(response.data);
+
+      const numsStr = response.data.phone.replace(/[^0-9]/g,'');
+        setWhatsApp(numsStr)
     });
-  }, [params.id]);
+    
+  }, [params.id, clinic]);
 
   if (!clinic) {
     return <p>carregando...</p>;
   }
-  // else{
-  //   var numsStr = clinic?.phone.replace(/[^0-9]/g,'');
-  //   setWhatsApp(numsStr)
-  // }
 
 
   return (
@@ -61,7 +61,7 @@ const Details: React.FC = () => {
               <br/>
               <span>Serviços: </span> <TagService content={clinic.services} />
               <br/>
-              <a href={`https://api.whatsapp.com/send/?phone=55`} target="blank">WhatApp
+              <a href={`https://api.whatsapp.com/send/?phone=55${whatsApp}`} target="blank">WhatApp
                 <img src={WhatsAppLogo} alt="WhatsAppLogo"/>
               </a >
 
