@@ -1,15 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../../components/Header';
 import TagService from '../../components/TagService';
+import api from '../../services/api';
 
 import { Container, ClinicContainer, ClinicHeader, ClinicInfo } from './styles';
 
+interface IClinicsProps {
+  id: number;
+  name: string;
+  email: string;
+  cep: string;
+  adress: string;
+  phone: string;
+  services: string;
+  about: string;
+}
+
+interface ClinicParams {
+  id: string;
+}
+
 const Details: React.FC = () => {
+  const params = useParams<ClinicParams>();
+  const [clinic, setClinic] = useState<IClinicsProps>();
 
-  useEffect(()=>{
+  useEffect(() => {
+    api.get(`clinic/${params.id}`).then((response) => {
+      setClinic(response.data);
+      console.log(response.data);
+    });
+  }, [params.id]);
 
-  },[])
-
+  if (!clinic) {
+    return <p>carregando...</p>;
+  }
   return (
     <>
       <Header title="Clínica tal" hiddeButtonBack={false} showButton={false} />
@@ -21,9 +46,9 @@ const Details: React.FC = () => {
               alt="clinica"
             />
             <div>
-              <strong>Clínica Tal</strong>
-              <p>E-mail: email@email.com</p>
-              <p>Telefone: (11) 3333-3333</p>
+              <strong>{clinic.name}</strong>
+              <p>E-mail: {clinic.email}</p>
+              <p>Telefone: {clinic.phone}</p>
               <br/>
               <TagService content="teste" /><TagService content="teste" />
               <TagService content="teste" />
@@ -33,17 +58,13 @@ const Details: React.FC = () => {
           </ClinicHeader>
           <ClinicInfo>
             <h2>Endereço</h2>
-            <p>CEP: 36900-022, Rua Fulano de Tal, N 1, Manhuaçu-MG</p>
+            <p>{clinic.adress}, CEP: {clinic.cep}</p>
           </ClinicInfo>
 
           <ClinicInfo>
             <h2>Sobre</h2>
             <p>
-              É um fato estabelecido há muito tempo que um leitor se distrairá
-              com o conteúdo legível de uma página ao examinar seu layout. O
-              objetivo de usar Lorem Ipsum é que ele tem uma distribuição de
-              letras mais ou menos normal, ao contrário de usar 'Conteúdo aqui,
-              conteúdo aqui', fazendo com que pareça um inglês legível.
+              {clinic.about}
             </p>
           </ClinicInfo>
         </ClinicContainer>

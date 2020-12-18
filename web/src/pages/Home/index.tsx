@@ -21,9 +21,9 @@ const Home: React.FC = () => {
   const [clinics, setClinics] = useState<IClinicsProps[]>([]);
 
   useEffect(() => {
-    api.get('clinics').then((response) => {
-      setClinics(response.data[0]);
-      console.log(response.data[0]);
+    api.get('clinic').then((response) => {
+      setClinics(response.data);
+      console.log(response.data);
     });
   }, []);
 
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <Clinics>
           {clinics.map((data) => {
             return(
-            <Link key={data.id} to="/details">
+            <Link key={data.id} to={`details/${data.id}`}>
               <img
                 src="https://cdn.pixabay.com/photo/2017/02/01/13/52/analysis-2030261_960_720.jpg"
                 alt="clinica"
