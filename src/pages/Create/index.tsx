@@ -1,4 +1,4 @@
-import { setServers } from 'dns';
+
 import React, { FormEvent, useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
@@ -67,6 +67,7 @@ const Create: React.FC = () => {
             <div className="content-input">
               <label htmlFor="">Nome:</label>
               <input
+              
                 type="text"
                 onChange={(e) => {
                   setName(e.target.value);

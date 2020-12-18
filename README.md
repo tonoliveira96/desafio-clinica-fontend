@@ -3,11 +3,13 @@
 
 # Instalação
 
-1. Faça o clone deste repositório usando `git clone https://github.com/tonoliveira96/desafio-clinica-fontend.git`
+1. Faça o clone deste repositório usando `git clone https://github.com/tonoliveira96/desafio-clinica-frontend.git`
 2. Entre na pasta do projeto usando `cd web`
 3. Rode `yarn install` para instalar todas as dependência.
 4. Rode `yarn start` para rodar o projeto.
 5. Acessar a rota `http://localhost:3000`.
+6. Para poder funcionar corretamente instale o <a href="https://github.com/tonoliveira96/desafio-clinica-backend.git">Backend</a> da aplicação.
+
 
 # Dependências
 

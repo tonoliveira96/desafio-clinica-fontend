@@ -33,6 +33,7 @@ export const ClinicHeader = styled.div`
 
   div {
     margin-left: 18px;
+    padding-top: 18px;
 
     strong {
       color: #000;
@@ -49,12 +50,40 @@ export const ClinicHeader = styled.div`
       color: #000
     }
 
-    button{
+    a{
+      display:flex;
+      flex-direction: row;
+      text-decoration: none;
+      align-items:center;
+      justify-content:center;
+      max-width: 128px;
+      color: #fff;
+      border: 0;
       padding: 5px;
+      margin-top: 12px;
       font-weight: bold;
       background: #25d366;
       border-radius: 4px;
+      transition: background-color 0.2s;
+
+
+      img{
+        width: 24px;
+        height: 24px;
+        padding: 2px;
+        margin-left: 6px;
+      }
+
+      &:hover{
+        background: #128c7e;
+      }
     }
+  }
+
+  @media(max-width: 580px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 export const ClinicInfo = styled.div`

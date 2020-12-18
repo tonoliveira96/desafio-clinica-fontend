@@ -6,6 +6,8 @@ import api from '../../services/api';
 
 import { Container, ClinicContainer, ClinicHeader, ClinicInfo } from './styles';
 
+import WhatsAppLogo from '../../assets/whatsapp-logo-1.png'
+
 interface IClinicsProps {
   id: number;
   name: string;
@@ -24,6 +26,7 @@ interface ClinicParams {
 const Details: React.FC = () => {
   const params = useParams<ClinicParams>();
   const [clinic, setClinic] = useState<IClinicsProps>();
+  const [whatsApp, setWhatsApp] = useState("");
 
   useEffect(() => {
     api.get(`clinic/${params.id}`).then((response) => {
@@ -35,9 +38,15 @@ const Details: React.FC = () => {
   if (!clinic) {
     return <p>carregando...</p>;
   }
+  // else{
+  //   var numsStr = clinic?.phone.replace(/[^0-9]/g,'');
+  //   setWhatsApp(numsStr)
+  // }
+
+
   return (
     <>
-      <Header title="Clínica tal" hiddeButtonBack={false} showButton={false} />
+      <Header title="Detalhes" hiddeButtonBack={false} showButton={false} />
       <Container>
         <ClinicContainer>
           <ClinicHeader>
@@ -52,7 +61,9 @@ const Details: React.FC = () => {
               <br/>
               <span>Serviços: </span> <TagService content={clinic.services} />
               <br/>
-              <button>WhatApp</button>
+              <a href={`https://api.whatsapp.com/send/?phone=55`} target="blank">WhatApp
+                <img src={WhatsAppLogo} alt="WhatsAppLogo"/>
+              </a >
 
             </div>
           </ClinicHeader>
