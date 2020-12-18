@@ -1,5 +1,5 @@
 <h1>Lista Clínicas (Frontend)</h1>
-<p>Desafio Lista Clínicas, o Frontend foi desenvolvido usando ReactJS, pronpondo um novo Layout para visualização de dados de clínicas cadastradas. Nesta aplicação é possivel lista clínicas de um banco de dados e cadastrar novas, ao clicar sobre uma clínica da lista é posssivel ver os detalhes, com informações como: Telefone, E-mail, Endereço e etc</p>
+<p>Desafio Lista Clínicas, o Frontend foi desenvolvido usando ReactJS, propondo um novo Layout para visualização de dados de clínicas cadastradas. Nesta aplicação é possível lista clínicas de um banco de dados e cadastrar novas, ao clicar sobre uma clínica da lista é possível ver os detalhes, com informações como: Telefone, E-mail, Endereço e etc.</p>
 
 # Instalação
 
