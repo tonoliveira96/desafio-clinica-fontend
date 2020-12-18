@@ -50,7 +50,9 @@ const Details: React.FC = () => {
               <p>E-mail: {clinic.email}</p>
               <p>Telefone: {clinic.phone}</p>
               <br/>
-              <TagService content={clinic.services} />
+              <span>Serviços: </span> <TagService content={clinic.services} />
+              <br/>
+              <button>WhatApp</button>
 
             </div>
           </ClinicHeader>

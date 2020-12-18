@@ -33,6 +33,7 @@ export const ClinicHeader = styled.div`
 
   div {
     margin-left: 18px;
+
     strong {
       color: #000;
       font-size: 24px;
@@ -41,6 +42,18 @@ export const ClinicHeader = styled.div`
     p{
       font-size:18px;
       color:#3d3d4d;
+    }
+
+    span{
+      font-size:18px;
+      color: #000
+    }
+
+    button{
+      padding: 5px;
+      font-weight: bold;
+      background: #25d366;
+      border-radius: 4px;
     }
   }
 `;
