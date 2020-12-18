@@ -1,5 +1,5 @@
 <h1>Lista Clínicas (Frontend)</h1>
-<p>Desafio Lista Clínicas, o Frontend foi desenvolvido usando ReactJS, pronpondo um novo Layout para cisualização de dados de clícas cadastradas. </p>
+<p>Desafio Lista Clínicas, o Frontend foi desenvolvido usando ReactJS, pronpondo um novo Layout para visualização de dados de clínicas cadastradas. </p>
 
 # Instalação
 
@@ -24,3 +24,4 @@
 * underscore
 
 # Front-end
+
