@@ -7,9 +7,28 @@ export const Container = styled.div`
   justify-content: center;
   padding: 5px 18px;
 `;
+
+export const ContainerFilter = styled.div `
+  background: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 4px 2px;
+  margin-bottom:4px;
+
+  label{
+    color: #3d3d4d;
+  }
+
+  button{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 10px;
+  }
+`
+
 export const Clinics = styled.div`
   flex: 1;
-  margin-top: 24px;
+  margin: 4px 0;
   max-width: 800px;
 
   a {
@@ -29,7 +48,7 @@ export const Clinics = styled.div`
     }
 
     & + a {
-      margin-top: 16px;
+      margin-top: 12px;
     }
 
     img {
@@ -47,15 +66,6 @@ export const Clinics = styled.div`
         color: #3d3d4d;
       }
 
-      label {
-        font-size: 18px;
-        margin-top: 10px;
-        margin-right: 8px;
-        padding: 4px;
-        border-radius: 25px;
-        color: #3d3d4d;
-        background-color: ${shade(-0.5,'#01a272')};
-      }
     }
     svg {
       margin-left: auto;

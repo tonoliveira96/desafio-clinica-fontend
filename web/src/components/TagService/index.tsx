@@ -6,10 +6,13 @@ interface ITagProps{
   content: string;
 }
 
-const TagService: React.FC <ITagProps>= ({content}) => {
+const TagService: React.FC <ITagProps>= ({content, ...rest}) => {
+  const serviceArray = content.split(',')
   return (
-    <Container>
-      {content}
+    <Container {...rest}>
+      {serviceArray.map((data)=>{
+        return(<span key={data}>{data}</span>)
+      })}
     </Container>
   );
 }
