@@ -8,23 +8,34 @@ export const Container = styled.div`
   padding: 5px 18px;
 `;
 
-export const ContainerFilter = styled.div `
+export const ContainerFilter = styled.div`
   background: #fff;
   border-radius: 5px;
   font-size: 18px;
-  padding: 4px 2px;
-  margin-bottom:4px;
+  padding: 4px 12px;
+  margin-bottom: 4px;
 
-  label{
+  label {
     color: #3d3d4d;
   }
 
-  button{
+  button {
     border-radius: 5px;
     padding: 2px;
     margin-left: 10px;
+    background: #01f3ab;
+    border: none;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: ${shade(0.3, '#01f3ab')};
+    }
   }
-`
+
+  svg{
+    margin-top: 2px;
+  }
+`;
 
 export const Clinics = styled.div`
   flex: 1;
@@ -65,7 +76,6 @@ export const Clinics = styled.div`
         font-size: 20px;
         color: #3d3d4d;
       }
-
     }
     svg {
       margin-left: auto;

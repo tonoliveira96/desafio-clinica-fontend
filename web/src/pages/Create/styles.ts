@@ -1,3 +1,4 @@
+import { shade } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -50,6 +51,28 @@ export const ConainerForm = styled.div`
         height: 64px;
         padding: 0 16px;
         margin-left: 10px;
+      }
+    }
+
+    button {
+      margin-top: 12px;
+      width: 100%;
+      height: 64px;
+      border: 0;
+      cursor: pointer;
+      background: #3cdc8c;
+      border-radius: 20px;
+      color: #ffffff;
+      font-weight: 800;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: background-color 0.2s;
+
+      &:hover{
+        background-color: ${shade(0.3, '#3cdc8c')}
       }
     }
   }
