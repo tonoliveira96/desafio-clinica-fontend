@@ -67,7 +67,7 @@ const Create: React.FC = () => {
             <div className="content-input">
               <label htmlFor="">Nome:</label>
               <input
-              
+                required
                 type="text"
                 onChange={(e) => {
                   setName(e.target.value);
@@ -77,6 +77,7 @@ const Create: React.FC = () => {
             <div className="content-input">
               <label htmlFor="">E-mail:</label>
               <input
+                required
                 type="text"
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -86,7 +87,8 @@ const Create: React.FC = () => {
             <div className="content-input">
               <label htmlFor="">Telefone:</label>
               <input
-                type="text"
+                required
+                type="number"
                 onChange={(e) => {
                   setPhone(e.target.value);
                 }}
@@ -97,7 +99,8 @@ const Create: React.FC = () => {
                 CEP:
               </label>
               <input
-                type="text"
+                type="number"
+                required
                 onBlur={() => searchCEP(cep)}
                 onChange={(e) => {
                   setCep(e.target.value);
@@ -116,6 +119,7 @@ const Create: React.FC = () => {
               </label>
               <input
                 type="text"
+                required
                 onChange={(e) => {
                   setServices(e.target.value);
                 }}

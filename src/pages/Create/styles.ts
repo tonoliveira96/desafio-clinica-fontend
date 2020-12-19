@@ -1,5 +1,5 @@
-import { shade } from 'polished';
-import styled from 'styled-components';
+import { shade } from "polished";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -52,6 +52,12 @@ export const ConainerForm = styled.div`
         padding: 0 16px;
         margin-left: 10px;
       }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
 
     button {
@@ -71,8 +77,8 @@ export const ConainerForm = styled.div`
 
       transition: background-color 0.2s;
 
-      &:hover{
-        background-color: ${shade(0.3, '#3cdc8c')}
+      &:hover {
+        background-color: ${shade(0.3, "#3cdc8c")};
       }
     }
   }
