@@ -28,6 +28,18 @@ export const ConainerForm = styled.div`
     width: 100%;
     flex-direction: column;
 
+    label {
+      color: #3d3d4d;
+      margin-right: 12px;
+      line-height: 24px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     div.content-input {
       display: flex;
       flex-direction: row;
@@ -35,11 +47,25 @@ export const ConainerForm = styled.div`
       align-items: center;
       margin-bottom: 12px;
 
-      label {
-        color: #3d3d4d;
-        margin-right: 12px;
-        line-height: 24px;
+      input {
+        max-width: 620px;
+        background: #f5f8fa;
+        border: 1px solid #d3e2e5;
+        border-radius: 20px;
+        outline: none;
+        color: #5c8599;
+        height: 64px;
+        padding: 0 16px;
+        margin-left: 10px;
       }
+    }
+
+    div.content-input-adress {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
 
       input {
         max-width: 620px;
@@ -53,10 +79,8 @@ export const ConainerForm = styled.div`
         margin-left: 10px;
       }
 
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+      input[type="number"] {
+        max-width: 100px;
       }
     }
 
